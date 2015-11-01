@@ -11,7 +11,7 @@ NginxGenerator = nginxer.NginxGenerator;
 ngen = new NginxGenerator({
   server_name: ["test.com", "*.test.com"],
   logs: {
-    log_formats: {
+    formats: {
       "compression": "'$remote_addr - $remote_user [$time_local] \"$request\" $status $bytes_sent \"$http_referer\" \"$http_user_agent\" \"$gzip_ratio\"'"
     },
     access: {

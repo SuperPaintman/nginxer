@@ -5,7 +5,7 @@ path            = require 'path'
 nginxer         = require path.join __dirname, '../app.js'
 
 # Init
-NginxGenerator = nginxer.NginxGenerator
+NginxGenerator  = nginxer.NginxGenerator
 
 ngen = new NginxGenerator {
     # Def
@@ -16,7 +16,7 @@ ngen = new NginxGenerator {
 
     # Logs
     logs:
-        log_formats: 
+        formats: 
             "compression":  "
                             '$remote_addr - $remote_user [$time_local] 
                             \"$request\" $status $bytes_sent 
