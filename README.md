@@ -1,0 +1,12 @@
+## Roadmap
+* Configs for [http://nginx.org/en/docs/http/ngx_http_geoip_module.html](ngx_http_geoip_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_access_module.html](ngx_http_access_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_v2_module.html](ngx_http_v2_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_auth_request_module.html](ngx_http_auth_request_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_gzip_static_module.html](ngx_http_gzip_static_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_limit_conn_module.html](ngx_http_limit_conn_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_limit_req_module.html](ngx_http_limit_req_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_map_module.html](ngx_http_map_module)
+* Configs for [http://nginx.org/en/docs/http/ngx_http_split_clients_module.html](ngx_http_split_clients_module)
+* `[?]` Configs for [http://nginx.org/en/docs/http/ngx_http_status_module.html](ngx_http_status_module)
+* `[?]` Configs for [http://nginx.org/ru/docs/http/ngx_http_proxy_module.html](ngx_http_proxy_module)
