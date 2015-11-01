@@ -28,6 +28,10 @@
   "directories": {
     "src": "development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperPaintman/nginxer.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "colors": "^1.1.2",
