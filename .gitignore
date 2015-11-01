@@ -5,7 +5,8 @@ node_modules/
 _*/
 
 # Зарендаренные файлы
-bin/
+# bin/
+bin/example/*.conf
 
 # Backup
 backup/

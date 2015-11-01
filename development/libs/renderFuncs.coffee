@@ -4,6 +4,12 @@ functions =
     Locations
     =====================================
     ###
+    ###*
+     * Создание отформатированнного log_format
+     * @param  {Object}     formats     - объект с форматами логов
+     * @param  {Integer}    [tabs=1]    - кол-во табуляций для выравнивания
+     * @return {String}                   отформатированная строка
+    ###
     the_log_formats: (formats, tabs = 1)->
         str = ""
 
@@ -17,6 +23,10 @@ functions =
 
             str += "log_format"
             str += " "
+
+            times = 4 - "log_format".length % 4
+            str += " " for i in [0...times]
+
             str += key
             str += " "
             str += val
@@ -26,29 +36,43 @@ functions =
 
         return str
 
+    ###*
+     * Создание отформатированнного access_log / error_log
+     * @param  {Object}     log         - данные логирования
+     * @param  {String}     type        - тип лога access / error
+     * @param  {Integer}    [tabs=1]    - кол-во табуляций для выравнивания
+     * @return {String}                   отформатированная строка
+    ###
     the_logs: (log, type, tabs = 1)->
         str = ""
 
-        if type is "access" then str += "access_log"
-        else str += "error_log"
+        unless log then str += "\# "
+
+        if type is "access"
+            str += "access_log"
+
+            times = 4 - "access_log".length % 4
+            str += " " for i in [0...times]
+        else 
+            str += "error_log"
+
+            times = 4 - "error_log".length % 4
+            str += " " for i in [0...times]
 
         str += " "
         str += log.path
 
-        if log.format then str += " format=#{log.format}"
-        if log.buffer then str += " buffer=#{log.buffer}"
-        if log.flush then str += " flush=#{log.flush}"
+        if log.format   then str += " format=#{log.format}"
+        if log.buffer   then str += " buffer=#{log.buffer}"
+        if log.flush    then str += " flush=#{log.flush}"
         if log.gzip
-            if log.gzip < 1 then log.gzip = 1
-            else if log.gzip > 9 then log.gzip = 9
+            if log.gzip < 1         then log.gzip = 1
+            else if log.gzip > 9    then log.gzip = 9
             
             str += " gzip=#{log.gzip}"
         str += ";"
 
         return str
-
-
-
 
     ###
     =====================================
