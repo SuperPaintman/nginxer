@@ -84,6 +84,13 @@ ngen = new NginxGenerator {
         types: [
             "text/plain"
             "text/css"
+            "application/json"
+            "application/x-javascript"
+            "text/xml"
+            "application/xml"
+            "application/xml+rss"
+            "text/javascript"
+            "application/javascript"
         ]
 }
 
