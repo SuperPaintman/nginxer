@@ -58,7 +58,7 @@ functions = {
       tabs = 1;
     }
     str = "";
-    if (!log) {
+    if (!(log != null ? log.path : void 0)) {
       str += "\# ";
     }
     if (type === "access") {
@@ -75,7 +75,11 @@ functions = {
       }
     }
     str += " ";
-    str += log.path;
+    if (log.path) {
+      str += log.path;
+    } else {
+      str += "tmp/nginx." + type + ".log";
+    }
     if (log.format) {
       str += " format=" + log.format;
     }

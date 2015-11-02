@@ -46,7 +46,7 @@ functions =
     the_logs: (log, type, tabs = 1)->
         str = ""
 
-        unless log then str += "\# "
+        unless log?.path then str += "\# "
 
         if type is "access"
             str += "access_log"
@@ -60,7 +60,8 @@ functions =
             str += " " for i in [0...times]
 
         str += " "
-        str += log.path
+        if log.path then str += log.path
+        else str += "tmp/nginx.#{ type }.log"
 
         if log.format   then str += " format=#{log.format}"
         if log.buffer   then str += " buffer=#{log.buffer}"
