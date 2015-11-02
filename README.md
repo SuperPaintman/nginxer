@@ -113,7 +113,6 @@ server {
     access_log   /var/nginx.acc.test.log format=compression buffer=32k flush=5m gzip=4;
     error_log    /var/nginx.err.test.log;
 
-    
     #####################################
     # GZIP
     #####################################
@@ -136,7 +135,6 @@ server {
     # gzip_proxied off;
     # gzip_comp_level 1;
 
-
     #####################################
     # Locations
     #####################################
@@ -149,36 +147,35 @@ server {
         add_header Host $host;
         add_header X-Real-IP $remote_addr;
         add_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        
 
         expires 30d;
         root /apps/nodejs/test.com/;
     }
-    
+
     # Static Files
     location /favicon.ico {
         # Headers
         add_header X-Create-By NGINXER;
-        
+
         # Trust Proxy
         add_header Host $host;
         add_header X-Real-IP $remote_addr;
         add_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        
+
         expires 30d;
         root /apps/nodejs/test.com/favicon;
     }
-    
+
     # Proxy
     location / {
         # Headers
         add_header X-Create-By NGINXER;
-        
+
         # Trust Proxy
         add_header Host $host;
         add_header X-Real-IP $remote_addr;
         add_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        
+
         # expires 3m;
         proxy_pass http://backend;
     }
