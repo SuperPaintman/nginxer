@@ -1,6 +1,6 @@
 {
   "name": "nginxer",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Generator for nginx configuration files",
   "main": "bin/app.js",
   "author": {

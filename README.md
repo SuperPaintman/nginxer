@@ -212,7 +212,7 @@ server {
 
 ------------------------------------
 
-## Use with buold tools
+## Use with build tools
 ### Gulp
 * [gulp-nginxer](https://www.npmjs.com/package/gulp-nginxer) - generate Nginx config from json file
 
