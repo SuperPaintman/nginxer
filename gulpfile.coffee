@@ -21,11 +21,6 @@ cson            = require 'gulp-cson'
 
 jsdoc           = require "gulp-jsdoc"
 
-# General
-uglify          = require 'gulp-uglify'
-rename          = require 'gulp-rename'
-insert          = require 'gulp-insert'
-
 ###
 =====================================
 Пути
