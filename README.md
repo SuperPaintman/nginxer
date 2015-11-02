@@ -210,6 +210,11 @@ server {
 
 * `Object`      **globals**
 
+------------------------------------
+
+## Use with buold tools
+### Gulp
+* [gulp-nginxer](https://www.npmjs.com/package/gulp-nginxer) - generate Nginx config from json file
 
 ------------------------------------
 
@@ -238,7 +243,6 @@ coffee -c gulpfile.coffee
 
 ## Roadmap
 ### Plugins
-* Gulp plugun
 * Yeolman generator
 
 ### Configs
