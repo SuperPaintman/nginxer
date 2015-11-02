@@ -240,9 +240,6 @@ coffee -c gulpfile.coffee
 ------------------------------------
 
 ## Roadmap
-### Templater
-* [`ERROR`] Remove extra whitespaces and new lines
-
 ### Plugins
 * Gulp plugun
 * Yeolman generator
